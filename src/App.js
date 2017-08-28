@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import marked from 'marked';
 import logo from './logo.svg';
 import './App.css';
 
@@ -149,6 +152,6 @@ Output.propTypes = {
   text: PropTypes.string
 }
 
-ReactDOM.render(<Previewer/>, document.getElementById('app'));
+ReactDOM.render(<Previewer/>, document.getElementById('root'));
 
 export default Previewer;

@@ -1,24 +1,165 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+#app {
+  background: -webkit-linear-gradient(left, #2F2727, #1a82f7)
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.previewer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-title {
+  width: 100%;
+  margin: 30px 0px;
+  font-size: 1.2em;
+  h1 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.legend-button {
+  font-size: 1.5em;
+  background: rgba(192, 192, 192, .3);
+  border: none;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  width: 100%;
+  margin: 20px;
+  &:hover {
+    background: rgba(192, 192, 192, .5);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.legend {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: rgba(192, 192, 192, .3);
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 20px;
+  .legend-title {
+    width: 100%;
+    text-align: center;
+  }
+  .column {
+    width: 50%;
+  }
+}
+
+.close-legend {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
+  margin: 5px;
+  height: 1.3em;
+  width: 1.3em;
+  line-height: 1.3em;
   text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  font-size: 1.2em;
+  user-select: none;
+  &:hover {
+    background: rgba(255,255,255,0.2);
+    cursor: default;
+  }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.row-define-markdown {
+  display: flex;
+  border-radius: 10px;
+  background: rgba(192, 192, 192, .3);
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.define-markdown {
+  padding: 0px 5px 10px;
 }
 
-.App-intro {
-  font-size: large;
+.md-component {
+  width: 50%;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+[class^="textarea"] {
+  height: 33vh;
+  background: white;
+  border: 1px solid black;
+  font-size: 18px;
+  padding: 0px;
+  textarea {
+    height: 100%;
+    width: 100%;
+    font: inherit;
+    font-family: monospace;
+    border: none;
+    outline: none;
+    resize: none;
+  }
+}
+
+.example-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75px;
+  margin: 0px 5px;
+
+  hr {
+    color: red;
+  }
+}
+
+.example-input {
+  font-family: monospace;
+  .example-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+blockquote {
+  border-left: 2px solid white;
+  padding: 0px 5px;
+}
+
+hr {
+  width: 100%;
 }

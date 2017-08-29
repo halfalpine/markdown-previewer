@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import marked from 'marked';
 // import logo from './logo.svg';
@@ -152,7 +151,5 @@ Input.propTypes = {
 Output.propTypes = {
   text: PropTypes.string
 }
-
-ReactDOM.render(<Previewer/>, document.getElementById('root'));
 
 export default Previewer;

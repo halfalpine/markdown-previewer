@@ -13,7 +13,8 @@ a {
 }
 
 #root {
-  background: -webkit-linear-gradient(270deg, #2F2727, #1a82f7)
+  background: -webkit-linear-gradient(270deg, #2F2727, #1a82f7);
+  min-height: 100vh;
 }
 
 p {

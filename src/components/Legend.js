@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Legend = ({handleLegendChange}) =>
   <div className="legend">
     <div className="close-legend" onClick={handleLegendChange}>&#10006;</div>
@@ -61,5 +64,9 @@ const Legend = ({handleLegendChange}) =>
       </div>
     </div>
   </div>
+
+Legend.propTypes = {
+  handleLegendChange: PropTypes.func.isRequired
+}
 
 export default Legend;

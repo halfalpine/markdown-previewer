@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Title = () =>
   <div className="page-title">
     <h1>Markdown Previewer</h1>

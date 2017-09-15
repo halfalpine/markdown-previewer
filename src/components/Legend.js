@@ -48,7 +48,7 @@ const Legend = ({handleLegendChange}) =>
         <h2>This is a heading 2</h2>
       </div>
       <div className="example-text">
-        <a href="#">This is a hyperlink</a>
+        <a href="www.example.com">This is a hyperlink</a>
       </div>
       <div className="example-text">
         <p>Italics work like <span className="italic">this</span> or like <span className="italic">this.</span></p>

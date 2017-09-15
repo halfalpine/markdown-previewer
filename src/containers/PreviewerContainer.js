@@ -1,13 +1,11 @@
 import {connect} from 'react-redux';
-import {updateText, toggleLegend} from '../actions';
+import {updateText, toggleLegend} from '../actions/PreviewerActions';
 import Previewer from '../components/Previewer';
-
-import marked from 'marked';
 
 const mapStateToProps = state => {
   return {
     text: state.text,
-    toggleLegend: state.toggleLegend
+    showLegend: state.showLegend
   };
 };
 

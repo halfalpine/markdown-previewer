@@ -5,9 +5,9 @@ import Title from './Title';
 import Legend from './Legend';
 import LegendButton from './LegendButton';
 import Input from './Input';
-import Output from '.Output';
+import Output from './Output';
 
-class Previewer extends Component {
+class Previewer extends React.Component {
   constructor() {
     super();
 
@@ -33,7 +33,7 @@ class Previewer extends Component {
           text={this.props.text}
           handleInputChange={this.handleInputChange}
         />
-        <Output text={this.props.text} foo={this.props.foo}/>
+        <Output text={this.props.text}/>
       </div>
     );
   }
@@ -41,9 +41,9 @@ class Previewer extends Component {
 
 Previewer.propTypes = {
   text: PropTypes.string.isRequired,
-  showLegend: PropTypes.boolean.isRequired,
+  showLegend: PropTypes.bool.isRequired,
   updateText: PropTypes.func.isRequired,
-  handleLegendChange: PropTypes.func.isRequired
+  toggleLegend: PropTypes.func.isRequired
 }
 
 export default Previewer;

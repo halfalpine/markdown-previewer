@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import marked from 'marked';
 
 const Output = ({text}) =>
   <div className="md-component">

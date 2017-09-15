@@ -1,8 +1,8 @@
 import React from 'react';
-import Previewer from './containers/Previewer';
+import PreviewerContainer from './containers/PreviewerContainer';
 
 const App = () => (
-  <Previewer />
+  <PreviewerContainer />
 )
 
 export default App;

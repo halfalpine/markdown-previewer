@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
 import text from './text';
-import legendFilter from './legendFilter';
+import legend from './legendFilter';
 
 const reducer = combineReducers({
   text,
-  legendFilter
+  showLegend: legend
 });
 
 export default reducer;

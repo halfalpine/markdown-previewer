@@ -1,8 +1,12 @@
-const text = (state = '', action) => {
+const UPDATE_TEXT = 'UPDATE_TEXT';
+
+const text = (state = 'foo', action) => {
   switch (action.type) {
     case UPDATE_TEXT:
-      return ...state, text: action.text);
+      return action.text;
     default:
       return state;
   }
 }
+
+export default text;

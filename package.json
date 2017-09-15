@@ -10,6 +10,7 @@
   "dependencies": {
     "marked": "^0.3.6",
     "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

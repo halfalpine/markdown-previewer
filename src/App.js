@@ -1,22 +1,8 @@
+import React from 'react';
+import Previewer from './containers/Previewer';
 
-// import logo from './logo.svg';
+const App = () => (
+  <Previewer />
+)
 
-
-
-
-
-
-
-Previewer.propTypes = {
-  text: PropTypes.string
-}
-
-Input.propTypes = {
-  text: PropTypes.string
-}
-
-Output.propTypes = {
-  text: PropTypes.string
-}
-
-export default Previewer;
+export default App;

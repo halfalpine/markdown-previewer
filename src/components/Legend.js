@@ -19,19 +19,49 @@ const Legend = ({ handleLegendChange }) => {
     },
     column: {
       width: "50%"
+    },
+    closeLegend: {
+      position: "absolute",
+      display: "block",
+      top: "5px",
+      right: "5px",
+      margin: "5px",
+      height: "1.3em",
+      width: "1.3em",
+      lineHeight: "1.3em",
+      textAlign: "center",
+      verticalAlign: "middle",
+      borderRadius: "50%",
+      fontSize: "1.2em",
+      userSelect: "none"
+    },
+    rowDefineMarkdown: {
+      display: "flex",
+      borderRadius: "10px",
+      background: "rgba(192, 192, 192, 0.3)"
+    },
+    defineMarkdown: {
+      padding: "0px 5px 10px"
     }
   };
 
   return (
     <div className="legend" style={styles.legend}>
-      <div className="close-legend" onClick={handleLegendChange}>
+      <div
+        className="close-legend"
+        style={styles.closeLegend}
+        onClick={handleLegendChange}
+      >
         &#10006;
       </div>
-      <h2 className="legend-title" styles={styles.legendTitle}>
+      <h2 className="legend-title" style={styles.legendTitle}>
         Legend
       </h2>
-      <div className="row-define-markdown">
-        <div className="column define-markdown" style={styles.column}>
+      <div className="row-define-markdown" style={styles.rowDefineMarkdown}>
+        <div
+          className="column define-markdown"
+          style={{ ...styles.column, ...styles.defineMarkdown }}
+        >
           <h3>What is Markdown?</h3>
           <blockquote cite="https://en.wikipedia.org/wiki/Markdown">
             Markdown is a lightweight markup language with plain text formatting

@@ -33,19 +33,6 @@ p {
 }
 
 .close-legend {
-  position: absolute;
-  display: block;
-  top: 5px;
-  right: 5px;
-  margin: 5px;
-  height: 1.3em;
-  width: 1.3em;
-  line-height: 1.3em;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 50%;
-  font-size: 1.2em;
-  user-select: none;
   &:hover {
     background: rgba(255, 255, 255, 0.2);
     cursor: default;

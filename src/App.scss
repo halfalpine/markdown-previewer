@@ -2,7 +2,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100vh;
   margin: 0;
 }
@@ -13,7 +14,7 @@ a {
 }
 
 #root {
-  background: -webkit-linear-gradient(270deg, #2F2727, #1a82f7);
+  background: -webkit-linear-gradient(270deg, #2f2727, #1a82f7);
   min-height: 100vh;
 }
 
@@ -28,29 +29,16 @@ p {
   justify-content: center;
 }
 
-.page-title {
-  width: 100%;
-  margin: 30px 0px;
-  font-size: 1.2em;
-  h1 {
-    text-align: center;
-    margin-bottom: 0px;
-  }
-  p {
-    text-align: center;
-  }
-}
-
 .legend-button {
   font-size: 1.5em;
-  background: rgba(192, 192, 192, .3);
+  background: rgba(192, 192, 192, 0.3);
   border: none;
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   width: 100%;
   margin: 20px;
   &:hover {
-    background: rgba(192, 192, 192, .5);
+    background: rgba(192, 192, 192, 0.5);
   }
   &:focus {
     outline: none;
@@ -62,7 +50,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background: rgba(192, 192, 192, .3);
+  background: rgba(192, 192, 192, 0.3);
   border-radius: 10px;
   padding: 0px 10px;
   margin: 20px;
@@ -90,7 +78,7 @@ p {
   font-size: 1.2em;
   user-select: none;
   &:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
     cursor: default;
   }
 }
@@ -98,7 +86,7 @@ p {
 .row-define-markdown {
   display: flex;
   border-radius: 10px;
-  background: rgba(192, 192, 192, .3);
+  background: rgba(192, 192, 192, 0.3);
 }
 
 .define-markdown {

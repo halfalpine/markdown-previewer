@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Title from './Title';
-import Legend from './Legend';
-import LegendButton from './LegendButton';
-import Input from './Input';
-import Output from './Output';
+import Title from "./Title";
+import Legend from "./Legend";
+import LegendButton from "./LegendButton";
+import Input from "./Input";
+import Output from "./Output";
 
 class Previewer extends React.Component {
   constructor() {
@@ -24,16 +24,25 @@ class Previewer extends React.Component {
   }
 
   render() {
-    return(
-      <div className="previewer">
+    const styles = {
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center"
+    };
+    return (
+      <div className="previewer" styles={styles}>
         <Title />
-        {!this.props.showLegend && <LegendButton handleLegendChange={this.handleLegendChange}/>}
-        {this.props.showLegend && <Legend handleLegendChange={this.handleLegendChange} />}
+        {!this.props.showLegend && (
+          <LegendButton handleLegendChange={this.handleLegendChange} />
+        )}
+        {this.props.showLegend && (
+          <Legend handleLegendChange={this.handleLegendChange} />
+        )}
         <Input
           text={this.props.text}
           handleInputChange={this.handleInputChange}
         />
-        <Output text={this.props.text}/>
+        <Output text={this.props.text} />
       </div>
     );
   }
@@ -44,6 +53,6 @@ Previewer.propTypes = {
   showLegend: PropTypes.bool.isRequired,
   updateText: PropTypes.func.isRequired,
   toggleLegend: PropTypes.func.isRequired
-}
+};
 
 export default Previewer;

@@ -39,6 +39,14 @@ const Legend = ({ handleLegendChange }) => {
     }
   `;
 
+  const Define = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background: rgba(192, 192, 192, 0.3);
+    border-radius: 10px;
+  `;
+
   const ExampleText = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,9 +64,17 @@ const Legend = ({ handleLegendChange }) => {
   `;
   const Row = styled.div`
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
   `;
   const Column = styled.div`flex: 1;`;
+  const Cite = styled.div`
+    margin: auto;
+    padding: 5px 40px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    border-radius: 10px;
+  `;
   const Bold = styled.span`font-weight: bold;`;
   const Italic = styled.span`font-style: italic;`;
   const BlockQuote = styled.span`
@@ -73,10 +89,10 @@ const Legend = ({ handleLegendChange }) => {
         <CloseLegend onClick={handleLegendChange}>&#10006;</CloseLegend>
         <h2 className="legend-title">Legend</h2>
       </LegendTitle>
-      <Row>
+      <Define>
         <Column>
           <h3>What is Markdown?</h3>
-          <blockquote cite="https://en.wikipedia.org/wiki/Markdown">
+          <blockquote>
             Markdown is a lightweight markup language with plain text formatting
             syntax. It is designed so that it can be converted to HTML and many
             other formats using a tool by the same name.
@@ -84,14 +100,25 @@ const Legend = ({ handleLegendChange }) => {
         </Column>
         <Column>
           <h3>Why should I be excited?</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            imperdiet risus a nisi facilisis congue. Donec condimentum
-            sollicitudin lectus id congue. Nullam ultricies pulvinar tincidunt.
-            Etiam vestibulum ut lectus eget cursus.
-          </p>
+          <blockquote>
+            The overriding design goal for Markdown’s formatting syntax is to
+            make it as readable as possible. The idea is that a
+            Markdown-formatted document should be publishable as-is, as plain
+            text, without looking like it’s been marked up with tags or
+            formatting instructions.
+          </blockquote>
         </Column>
-      </Row>
+        <Row>
+          <Cite>
+            - John Gruber, author of {" "}
+            <a href="https://daringfireball.net/projects/markdown/">
+              'Markdown'
+            </a>
+            {", at "}
+            <a href="https://daringfireball.net/">Daring Fireball</a>
+          </Cite>
+        </Row>
+      </Define>
       <Row>
         <Column>
           <ExampleInput>

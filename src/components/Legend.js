@@ -22,11 +22,43 @@ const Legend = ({ handleLegendChange }) => {
       }
     }
   `;
+
+  const CloseLegend = styled.div`
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      cursor: default;
+    }
+  `;
+
+  const ExampleText = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 75px;
+    margin: 0px 5px;
+    hr {
+      color: red;
+    }
+  `;
+  const ExampleInput = styled.div`
+    font-family: monospace;
+    .example-text {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  `;
+  const Bold = styled.span`font-weight: bold;`;
+  const Italic = styled.span`font-style: italic;`;
+  const BlockQuote = styled.span`
+    border-left: 2px solid white;
+    padding: 0px 5px;
+  `;
+  const Hr = styled.hr`width: 100%;`;
+
   return (
     <Legend>
-      <div className="close-legend" onClick={handleLegendChange}>
-        &#10006;
-      </div>
+      <CloseLegend onClick={handleLegendChange}>&#10006;</CloseLegend>
       <h2 className="legend-title">Legend</h2>
       <div className="row-define-markdown">
         <div className="column define-markdown">
@@ -47,59 +79,58 @@ const Legend = ({ handleLegendChange }) => {
           </p>
         </div>
       </div>
-      <div className="column example-input">
-        <div className="example-text">
+      <ExampleInput>
+        <ExampleText>
           <p>This is a heading 1</p>
           <p>===================</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>This is a heading 2</p>
           <p>-------------------</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>[This is a hyperlink](http://www.example.com)</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>Italics work like *this* or like _this_.</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>Bold text works like **this** or like __this__</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>> This is a blockquote</p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>Make a horizontal rule with --- or ***</p>
-        </div>
-      </div>
+        </ExampleText>
+      </ExampleInput>
       <div className="column">
-        <div className="example-text">
+        <ExampleText>
           <h1>This is a heading 1</h1>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <h2>This is a heading 2</h2>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <a href="www.example.com">This is a hyperlink</a>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>
-            Italics work like <span className="italic">this</span> or like{" "}
-            <span className="italic">this.</span>
+            Italics work like <Italic>this</Italic> or like{" "}
+            <Italic>this.</Italic>
           </p>
-        </div>
-        <div className="example-text">
+        </ExampleText>
+        <ExampleText>
           <p>
-            Bold text works like <span className="bold">this</span> or like{" "}
-            <span className="bold">this.</span>
+            Bold text works like <Bold>this</Bold> or like <Bold>this.</Bold>
           </p>
-        </div>
-        <div className="example-text">
-          <blockquote>This is a blockquote</blockquote>
-        </div>
-        <div className="example-text">
-          <hr />
-        </div>
+        </ExampleText>
+        <ExampleText>
+          <BlockQuote>This is a blockquote</BlockQuote>
+        </ExampleText>
+        <ExampleText>
+          <Hr />
+        </ExampleText>
       </div>
     </Legend>
   );

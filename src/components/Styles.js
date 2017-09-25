@@ -19,6 +19,7 @@ export const Preview = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   background: linear-gradient(270deg, #2f2727, #1a82f7);
   min-height: 100vh;
 `;
